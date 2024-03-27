@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomato Plant Disease Information</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Custom styling for file input button */
+    .cloud-like-button {
+        background-color: #f0f0f0;
+        border: 2px dashed #aaaaaa;
+        border-radius: 10px;
+        color: #555;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    .cloud-like-button:hover {
+        background-color: #e0e0e0;
+    }
+    .cloud-like-button:active {
+        background-color: #d0d0d0;
+    }
+    .cloud-like-button input[type="file"] {
+        display: none;
+    }
+    #result {
+        margin-top: 20px;
+    }
+    .center {
+        text-align: center;
+        margin: auto;
+    }
+    .recommendations-container {
+        display: none; /* Hide recommendations container by default */
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Plant Disease Classifier</h1>
+  </header>
+  <label for="fileInput" class="cloud-like-button center" style="width: 200px; display: block; margin: 10px auto;">
+    <span>Choose an image</span>
+    <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect(event)">
+</label>
+
+<button id="classifyButton" style="width: 200px; display: block; margin: 10px auto 20px;" onclick="classifyImage()">Classify</button>
+
+<div id="result" class="center"></div>
+
+<div class="recommendations-container" id="recommendations">
+    <!-- Recommendations will be displayed here -->
+</div>
+
+<button id="exploreButton" style="display: none;" onclick="exploreSolutions()" class="center">Explore Solutions</button>
+  
+<div class="flower-left">
+    <div class="flower-petal"></div>
+    <div class="flower-center"></div>
+</div>
+<div class="flower-right">
+    <div class="flower-petal"></div>
+    <div class="flower-center"></div>
+</div>
+<div class="leaf-left">
+    <img src="../agri/styles/leaves.png" alt="Leaf" class="leaf">
+</div>
+<div class="leaf-right">
+    <img src="../agri/styles/leaves.png" alt="Leaf" class="leaf">
+</div>
+
+<!-- Tomato images -->
+<div class="tomato-left">
+    <img src="../agri/styles/tomato.png" alt="Tomato" class="tomato">
+</div>
+<div class="tomato-right">
+    <img src="../agri/styles/tomato.png" alt="Tomato" class="tomato">
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

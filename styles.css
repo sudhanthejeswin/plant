@@ -1,0 +1,333 @@
+/* Common styles for both mobile and laptop */
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url(../agri/styles/ll.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+   
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 6px solid #db1c78;
+  
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Styles for laptop/desktop view */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 80%; /* Adjust container width for larger screens */
+    }
+
+    h1 {
+        font-size: 45px; /* Increase heading font size for larger screens */
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: #000000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow to the header */
+    }
+    
+    input[type="text"] {
+        width: 60%; /* Retain input width for larger screens */
+    }
+
+    button {
+        padding: 15px 30px; /* Increase button padding for larger screens */
+        font-size: 20px; /* Increase button font size for larger screens */
+    }
+
+    #diseaseInfo {
+        padding: 30px; /* Increase padding for larger screens */
+    }
+}
+
+/* Styles for mobile view */
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 20px; /* Adjust container padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 36px; /* Decrease heading font size for smaller screens */
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: #0a0000;
+        box-shadow: 0 6px 4px rgba(37, 221, 16, 0.927); /* Add box shadow to the header */
+    }
+    
+    input[type="text"] {
+        width: 100%; /* Take up full width for smaller screens */
+    }
+
+    button {
+        padding: 12px 24px; /* Retain button padding for smaller screens */
+        font-size: 18px; /* Retain button font size for smaller screens */
+    }
+
+    #diseaseInfo {
+        padding: 15px; /* Decrease padding for smaller screens */
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #f00573;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow 1s ease-in-out infinite alternate, slideInDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #45e9c0, 0 0 40px #53d7b6, 0 0 50px #72c1b2, 0 0 60px #00ffd0a3, 0 0 70px #17826e;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #22937e, 0 0 40px #81ccbe, 0 0 50px #018c89, 0 0 60px #159384, 0 0 70px #17b2a5, 0 0 80px #00ffd9bc;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: slideInLeft 1s ease-in-out; /* Added animation for form */
+}
+
+label {
+    font-size: 20px;
+    color: #000000;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: floatInput 2s ease-in-out infinite alternate; /* Add animation to input field */
+}
+
+@keyframes floatInput {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px); /* Move input field up */
+    }
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: pulseButton 1s infinite alternate; /* Added animation for button */
+}
+
+button:hover {
+    background-color: #fa277f;
+}
+
+#diseaseInfo {
+    
+    text-align: left;
+    padding: 20px;
+    border: 4px solid #ff0b0b;
+    border-radius: 10px;
+    animation: fadeInDown 1s ease-in-out; /* Added animation for disease info */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.flower-left,
+.flower-right {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.flower-left {
+    left: 0;
+}
+
+.flower-right {
+    right: 0;
+}
+
+.flower-petal {
+    width: 10px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform-origin: bottom center;
+    animation: rotatePetal 4s infinite alternate;
+}
+
+@keyframes rotatePetal {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.flower-center {
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.leaf-left,
+.leaf-right {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: auto;
+    z-index: 9999;
+}
+
+.leaf-left {
+    left: 10px;
+    animation: moveLeftLeaf 4s infinite alternate; /* Added animation */
+}
+
+.leaf-right {
+    right: 10px;
+    animation: moveRightLeaf 4s infinite alternate; /* Added animation */
+}
+
+.leaf {
+    width: 80px;
+    height: auto;
+    background-image: url('../agri/styles/leaves.png'); /* Adjust the path as needed */
+    background-size: cover;
+}
+
+@keyframes moveLeftLeaf {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(60px) rotate(20deg);
+    }
+}
+
+@keyframes moveRightLeaf {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(60px) rotate(-20deg);
+    }
+}
+
+
+.tomato-left {
+    position: absolute;
+    bottom: 10px; /* Adjusted position from the bottom */
+    left: 20px; /* Adjusted position from the left */
+    animation: moveLeftTomato 4s infinite alternate;
+}
+
+.tomato-right {
+    position: absolute;
+    bottom: 10px; /* Adjusted position from the bottom */
+    right: 20px; /* Adjusted position from the right */
+    animation: moveRightTomato 4s infinite alternate;
+}
+
+.tomato {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    background-image: url('../agri/styles/tomato.png'); /* Add the path to your tomato image */
+    background-size: cover;
+}
+
+@keyframes moveLeftTomato {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100px) rotate(20deg);
+    }
+}
+
+@keyframes moveRightTomato {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100px) rotate(-20deg);
+    }
+}
